@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
     // Rotas para as vagas
     Route::get('/vagas', [VagaController::class, 'index'])->name('vagas.index');
     Route::get('/vagas/create', [VagaController::class, 'create'])->name('vagas.create');
+    Route::post('/vagas', [VagaController::class, 'store'])->name('vagas.store');
     // Fim das rotas para as vagas
 
 

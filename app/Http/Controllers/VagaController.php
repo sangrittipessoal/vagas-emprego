@@ -15,4 +15,12 @@ class VagaController extends Controller {
         
         return view('vagas.index', ['vagas' => $vagas]);
     }
+
+    public function create() {
+        return view('vagas.add');
+    }
+
+    public function store(Request $request){
+        dd($request->all());
+    }
 }

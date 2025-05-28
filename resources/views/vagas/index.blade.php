@@ -9,6 +9,9 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
+
+                    <a href="{{ route('vagas.create') }}"> Cadastrar Vaga </a>
+                    
                     <table id="example" class="display" style="width:100%">
                         <thead>
                             <tr>
@@ -42,6 +45,6 @@
         $(document).ready(function () {
             $('#example').DataTable();
         });
-        
+
     </script>
 </x-app-layout>

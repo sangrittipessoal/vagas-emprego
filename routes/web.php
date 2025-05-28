@@ -10,8 +10,6 @@ Route::get('/', function () {
 
 //Route::resource('vagas', VagasController::class);
 
-Route::get('/vagas', [VagaController::class, 'index'])->name('vagas.index');
-// Route::get('/vagas/create', [VagaController::class, 'create'])->name('vagas.create');
 // Route::post('/vagas', [VagaController::class, 'store'])->name('vagas.store');
 // Route::get('/vagas/{vaga}', [VagaController::class, 'show'])->name('vagas.show');
 // Route::get('/vagas/{vaga}/edit', [VagaController::class, 'edit'])->name('vagas.edit');
@@ -23,6 +21,15 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+
+    
+    // Rotas para as vagas
+    Route::get('/vagas', [VagaController::class, 'index'])->name('vagas.index');
+    Route::get('/vagas/create', [VagaController::class, 'create'])->name('vagas.create');
+    // Fim das rotas para as vagas
+
+
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

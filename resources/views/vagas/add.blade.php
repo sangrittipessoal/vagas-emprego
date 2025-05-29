@@ -12,7 +12,9 @@
 
                     <form action="{{ route('vagas.store') }}" method="POST">
                         @csrf
-                        <input type="text" name="nome">
+                        <input type="text" name="nome" placeholder="Nome">
+                        <input type="text" name="descricao" placeholder="Descrição">
+                        <input type="text" name="salario" placeholder="Salario">
                         <button type="submit"> Enviar </button>
                     </form>
                 </div>

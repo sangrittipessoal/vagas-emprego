@@ -27,6 +27,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/vagas', [VagaController::class, 'index'])->name('vagas.index');
     Route::get('/vagas/create', [VagaController::class, 'create'])->name('vagas.create');
     Route::post('/vagas', [VagaController::class, 'store'])->name('vagas.store');
+
+    //Route::delete('/vagas/{vaga}', [VagaController::class, 'destroy'])->name('vagas.destroy');
+    Route::get('/vagas/delete/{vaga}', [VagaController::class, 'deletar'])
+    ->name('vagas.deletar');
     // Fim das rotas para as vagas
 
 

@@ -29,9 +29,13 @@
                                     <td>{{ $vaga->id }}</td>
                                     <td>{{ $vaga->nome }}</td>
                                     <td>{{ $vaga->descricao }}</td>
-                                    <td>{{ $vaga->user_id }}</td>
+                                    <td>{{ $vaga->usuario->name }}</td>
                                     <td>{{ $vaga->salario }}</td>
-                                    <td> <a href="{{ route('vagas.deletar', $vaga->id) }}" >Deletar</a> </td>
+                                    <td> 
+                                        <a href="{{ route('vagas.deletar', $vaga->id) }}"> Deletar </a> 
+                                        <a href="{{ route('vagas.show', $vaga->id) }}"> Visualizar </a>
+                                        <a href="{{ route('vagas.edit', $vaga->id) }}"> Editar     </a>
+                                    </td>
                                 </tr>
                             @endforeach
                             
